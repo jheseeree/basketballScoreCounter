@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 50%;
+            background-position-x: 50%;
+        }
+        .main-board {
+            width: min-content;
+            background: #1B244A !important;
+        }
+        .plus-btn {
+            color: #9AABD8;
+            border: 1px solid #9AABD8;
+        }
+        .score-display {
+            background: black;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            color: #F94F6D;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+    <div class="main-board card p-4">
+        <div class="d-flex">
+            <div class="p-3">
+                <h3 class="text-center text-light text-uppercase font-weight-bold">Home</h3>
+                <h1 id="home_display" class="text-center score-display py-2 my-3">0</h1>
+                <div class="d-flex">
+                    <button onClick="addHome(1)" class="btn plus-btn m-1">+1</button>
+                    <button onClick="addHome(2)" class="btn plus-btn m-1">+2</button>
+                    <button onClick="addHome(3)" class="btn plus-btn m-1">+3</button>
+                </div>
+            </div>
+            <div class="p-3">
+                <h3 class="text-center text-light text-uppercase font-weight-bold">Guest</h3>
+                <h1 id="guest_display" class="text-center score-display py-2 my-3">0</h1>
+                <div class="d-flex">
+                    <button onClick="addGuest(1)" class="btn plus-btn m-1">+1</button>
+                    <button onClick="addGuest(2)" class="btn plus-btn m-1">+2</button>
+                    <button onClick="addGuest(3)" class="btn plus-btn m-1">+3</button>
+                </div>
+            </div>
+        </div>
+        <button onClick="reset()" class="btn btn-success">New Game</button>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
